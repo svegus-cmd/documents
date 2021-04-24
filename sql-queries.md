@@ -1,72 +1,65 @@
-Схема БД состоит из четырех таблиц:
+The database scheme consists of four tables:
 Product(maker, model, type)
 PC(code, model, speed, ram, hd, cd, price)
-Laptop(code, model, speed, ram, hd, price, screen)
+Laptop(code, model, speed, ram, hd, screen, price)
 Printer(code, model, color, type, price)
-Таблица Product представляет производителя (maker), номер модели (model) и тип ('PC' - ПК, 'Laptop' - ПК-блокнот или 'Printer' - принтер). 
-Предполагается, что номера моделей в таблице Product уникальны для всех производителей и типов продуктов. 
-В таблице PC для каждого ПК, однозначно определяемого уникальным кодом – code, указаны модель – model (внешний ключ к таблице Product), 
-скорость - speed (процессора в мегагерцах), объем памяти - ram (в мегабайтах), размер диска - hd (в гигабайтах), 
-скорость считывающего устройства - cd (например, '4x') и цена - price. 
-Таблица Laptop аналогична таблице РС за исключением того, что вместо скорости CD содержит размер экрана -screen (в дюймах).
-В таблице Printer для каждой модели принтера указывается, является ли он цветным - color ('y', если цветной), 
-тип принтера - type (лазерный – 'Laser', струйный – 'Jet' или матричный – 'Matrix') и цена - price.
+The Product table contains data on the maker, model number, and type of product ('PC', 'Laptop', or 'Printer'). It is assumed that model numbers in the Product table are unique for all makers and product types. Each personal computer in the PC table is unambiguously identified by a unique code, and is additionally characterized by its model (foreign key referring to the Product table), processor speed (in MHz) – speed field, RAM capacity (in Mb) - ram, hard disk drive capacity (in Gb) – hd, CD-ROM speed (e.g, '4x') - cd, and its price. The Laptop table is similar to the PC table, except that instead of the CD-ROM speed, it contains the screen size (in inches) – screen. For each printer model in the Printer table, its output type (‘y’ for color and ‘n’ for monochrome) – color field, printing technology ('Laser', 'Jet', or 'Matrix') – type, and price are specified.
 
-Задача 1. Найдите номер модели, скорость и размер жесткого диска для всех ПК стоимостью менее 500 дол. Вывести: model, speed и hd
+Exercise: 1. Find the model number, speed and hard drive capacity for all the PCs with prices below $500.
+Result set: model, speed, hd.
 ```sql
 select model, speed, hd 
 from pc where price < 500;
 ```
-Задача 2. Найдите производителей принтеров. Вывести: maker
+Exercise: 2. List all printer makers. Result set: maker.
 ```sql
 select Distinct Maker
 from Product where type = 'Printer';
 ```
-Задача 3. Найдите номер модели, объем памяти и размеры экранов ПК-блокнотов, цена которых превышает 1000 дол.
+Exercise: 3. Find the model number, RAM and screen size of the laptops with prices over $1000.
 ```sql
 select model, ram, screen
 from Laptop Where Price > 1000;
 ```
-Задача 4. Найдите все записи таблицы Printer для цветных принтеров.
+Exercise: 4. Find all records from the Printer table containing data about color printers.
 ``` sql
 select *
 from Printer Where color = 'y';
 ```
-Задача 5.Найдите номер модели, скорость и размер жесткого диска ПК, имеющих 12x или 24x CD и цену менее 600 дол.
+Exercise: 5. Find the model number, speed and hard drive capacity of PCs cheaper than $600 having a 12x or a 24x CD drive.
 ``` sql
 select model, speed, hd
 from PC
 where (cd = '12x' or cd = '24x') and price < 600;
 ```
-Задача 6. Для каждого производителя, выпускающего ПК-блокноты c объёмом жесткого диска не менее 10 Гбайт, найти скорости таких ПК-блокнотов.
-Вывод: производитель, скорость.
+Exercise: 6. For each maker producing laptops with a hard drive capacity of 10 Gb or higher, find the speed of such laptops. Result set: maker, speed.
 ```sql
 select Distinct maker, speed
 from Product
 join Laptop on Product.model=Laptop.model
 where hd >=10;
 ```
-Задача 7. Найдите производителя, выпускающего ПК, но не ПК-блокноты.
+Exercise: 7. Find the makers producing PCs but not laptops.
 ```sql
 select Distinct maker
 from Product
 where type = 'PC' and maker not in (Select maker From Product Where type = 'Laptop');
 ```
-Задача 8. Найдите производителей ПК с процессором не менее 450 Мгц. Вывести: Maker
+Exercise: 8. Find the makers of PCs with a processor speed of 450 MHz or more. Result set: maker.
 ```sql
 select Distinct maker
 from Product
 join PC on Product.model=PC.model
 where speed >= 450;
 ```
-Задаяа 9. Найдите пары моделей PC, имеющих одинаковые скорость и RAM. В результате каждая пара указывается только один раз, т.е. (i,j), но не (j,i), 
-Порядок вывода: модель с большим номером, модель с меньшим номером, скорость и RAM.
+Exercise: 9. Get pairs of PC models with identical speeds and the same RAM capacity. Each resulting pair should be displayed only once, i.e. (i, j) but not (j, i). Result set: model with the bigger number, model with the smaller number, speed, and RAM.
 ```sql
 select Distinct a.model, b.model, b.speed, b.ram
 from PC a
 join PC b on a.ram=b.ram and a.speed=b.speed and a.model > b.model;
 ```
-Задача 10. Для каждого значения скорости ПК, превышающего 600 МГц, определите среднюю цену ПК с такой же скоростью. Вывести: speed, средняя цена.
+Exercise: 10. For each value of PC speed that exceeds 600 MHz, find out the average price of PCs with identical speeds.
+Result set: speed, average price.
 ```sql
 select speed, Avg(price) as Avg_price
 from PC
