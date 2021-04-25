@@ -18,10 +18,10 @@
        "start_year"  : "2003",
        "finish_year" : "2008"}],
      "language" : [
-       {"lang_name" : "Russian",
-        "level"     : "Native"},
-       {"lang_name" : "English",
-        "level"     : "Beginner"}],
+       {"lang_name"  : "Russian",
+        "level"      : "Native"},
+       {"lang_name"  : "English",
+        "level"      : "Beginner"}],
      "hobby"    : {"reading" "cooking"}
      }
    }
@@ -36,27 +36,27 @@
     "company"   : "Hospital",
     "e-mail"    : "popkova_ma@gmail.com",
     "education" : [
-      {"ed_name"     : "school",
-       "start_year"  : "1994",
-       "finish_year" : "2005"},
+      {"ed_name"      : "school",
+       "start_year"   : "1994",
+       "finish_year"  : "2005"},
       {"ed_name"      : "Belarusian State Medical University",
-       "start_year"  : "2005",
-       "finish_year" : "2010"}],
+       "start_year"   : "2005",
+       "finish_year"  : "2010"}],
      "language" : [
-       {"lang_name" : "Russian",
-        "level"     : "Native"},
-       {"lang_name" : "English",
-        "level"     : ""}],
+       {"lang_name"   : "Russian",
+        "level"       : "Native"},
+       {"lang_name"   : "English",
+        "level"       : ""}],
      "hobby"    : {"yoga" "beuaty"}
      }
    }
   "kids": [ 
     {"firstname":  "Alena",
-    "sex"      :  "female",
-    "age"      :  6},
+    "sex"       :  "female",
+    "age"       :  6},
     {"firstname":  "Mark",
-    "sex"      :  "male",
-    "age"      :  4}]
+    "sex"       :  "male",
+    "age"       :  4}]
     }
     
     
