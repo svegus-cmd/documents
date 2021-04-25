@@ -1,6 +1,6 @@
 ```json
-family: {
-  husband: { 
+"family": {
+  "husband": { 
     "firstname" : "Oleg",
     "lastname"  : "Popkov",
     "age"       : 35,
@@ -24,7 +24,7 @@ family: {
         "level"     : "Beginner"}],
      "hobby"    : {"reading", "cooking"}
      }
-  wife: { 
+  "wife": { 
     "firstname" : "Marina",
     "lastname"  : "Popkova",
     "age"       : 32,
@@ -48,6 +48,16 @@ family: {
         "level"     : ""}],
      "hobby"    : {"yoga", "beuaty"}
      } 
+  "kids": [ 
+    {"firstname":  "Alena",
+    "sex"      :  "female",
+    "age"      :  6},
+    {"firstname":  "Mark",
+    "sex"      :  "male",
+    "age"      :  4}]
+    }
+    
+    
    ```
    
      
