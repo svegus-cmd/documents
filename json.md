@@ -1,4 +1,4 @@
-
+```json
 family: {
   husband: { 
     "firstname" : "Oleg",
@@ -48,7 +48,8 @@ family: {
         "level"     : ""}],
      "hobby"    : {"yoga", "beuaty"}
      } 
-   kids: [
+   ```
+   
      
      
         
