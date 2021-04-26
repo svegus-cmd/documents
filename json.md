@@ -1,5 +1,5 @@
 ```json
-"family": {
+{"family": {
   "husband": { 
     "firstname" : "Oleg",
     "lastname"  : "Popkov",
@@ -57,6 +57,7 @@
     {"firstname":  "Mark",
     "sex"       :  "male",
     "age"       :  4}]
+    }
     }
     
     
