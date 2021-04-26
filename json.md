@@ -7,13 +7,13 @@
       "age": 35,
       "is_married": true,
       "has_kids": true,
-      "Location": {
+      "location": {
         "country": "Belarus",
         "city": "Minsk"
       },
       "job": "enginner",
       "company": "Minskpromstroy",
-      "e-mail": "o.popkov@gmail.com",
+      "email": "o.popkov@gmail.com",
       "education": [
         {
           "ed_name": "school",
@@ -47,13 +47,13 @@
       "age": 32,
       "is_married": true,
       "has_kids": true,
-      "Location": {
+      "location": {
         "country": "Belarus",
         "city": "Minsk"
       },
       "job": "doctor",
       "company": "Hospital",
-      "e-mail": "popkova_ma@gmail.com",
+      "email": "popkova_ma@gmail.com",
       "education": [
         {
           "ed_name": "school",
@@ -73,7 +73,7 @@
         },
         {
           "lang_name": "English",
-          "level": ""
+          "level": "null"
         }
       ],
       "hobby": [
