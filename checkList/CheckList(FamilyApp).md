@@ -87,8 +87,8 @@
 |4.19  |               |low     |There is a space in the date number                                                                       |
 |4.20  |               |medium  |Delete the date in the Birth day field using the arrows on the keyboard                                   |
 |4.21  |               |medium  |Remove the entered data in the Birt day field with the delete button                                      |
-|5.1   |Calendar button|high    |[Calendar] button is active                                                                               |
-|5.2   |               |high    |Calendar opens when click  the [Calendar] button                                                          |
+|5.1   |Calendar button|high    |The [Calendar] button is active                                                                               |
+|5.2   |               |high    |The Calendar opens when click  the [Calendar] button                                                          |
 |5.3   |               |high    |Select day, month, year                                                                                   |
 |5.4   |               |low     |The [Calendar] Button icon is Inverted black triangle                                                     |
 |5.5   |               |low     |The [Calendar] button is to the right of the field Birth Day                                              |
