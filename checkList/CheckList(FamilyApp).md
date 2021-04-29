@@ -89,7 +89,7 @@
 |4.21  |               |medium  |Remove the entered data in the Birt day field with the delete button                                      |
 |5.1   |Calendar button|high    |The [Calendar] button is active                                                                               |
 |5.2   |               |high    |The Calendar opens when click  the [Calendar] button                                                          |
-|5.3   |               |high    |Select day, month, year                                                                                   |
+|5.3   |               |high    |Select day, month, year in the Calendar                                                                                 |
 |5.4   |               |low     |The [Calendar] Button icon is Inverted black triangle                                                     |
 |5.5   |               |low     |The [Calendar] button is to the right of the field Birth Day                                              |
 |5.6   |               |medium  |The calendar opens when double click on the [Calendar] button                                             |
