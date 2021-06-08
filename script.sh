@@ -1,4 +1,5 @@
 #!/bin/bash
+echo bye
 cd folder2
 mkdir folder{10..12}
 cd folder10
