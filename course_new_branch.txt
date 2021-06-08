@@ -1,1 +1,3 @@
 create new branch git checkout -b name_branch
+vim file.txt
+
