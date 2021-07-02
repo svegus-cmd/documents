@@ -1,1 +1,31 @@
-{"id":"8b34968b-bee3-46ec-a1bb-980a2e0f6e1c","name":"my environment","values":[{"key":"token","value":"\"/s34lfgbj/Sveta/jjd909/98319kjkWpqc401712345440513evny\"","enabled":true},{"key":"url","value":"http://168.119.182.98:5002","enabled":true},{"key":"salary1_5Year","value":"","enabled":true},{"key":"name","value":"Sveta","enabled":true},{"key":"curr_code","value":"","enabled":true}]}
+{
+  "id": "8b34968b-bee3-46ec-a1bb-980a2e0f6e1c",
+  "name": "my environment",
+  "values": [
+    {
+      "key": "token",
+      "value": "\"/s34lfgbj/Sveta/jjd909/98319kjkWpqc401712345440513evny\"",
+      "enabled": true
+    },
+    {
+      "key": "url",
+      "value": "http://168.119.182.98:5002",
+      "enabled": true
+    },
+    {
+      "key": "salary1_5Year",
+      "value": "",
+      "enabled": true
+    },
+    {
+      "key": "name",
+      "value": "Sveta",
+      "enabled": true
+    },
+    {
+      "key": "curr_code",
+      "value": "",
+      "enabled": true
+    }
+  ]
+}
